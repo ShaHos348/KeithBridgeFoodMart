@@ -1,16 +1,84 @@
-# React + Vite
+# Keith Bridge Food Mart Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Official website for **Keith Bridge Food Mart (EXXON)** in Cumming, Georgia.  
+This site highlights the store’s authentic Mexican food, services, customer reviews, location, and contact information in a clean, modern, single-page layout.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🏪 About
 
-## React Compiler
+Keith Bridge Food Mart is a neighborhood EXXON station serving fresh, made-to-order Mexican food alongside quality fuel and everyday essentials.  
+The website is designed to reflect the store’s community focus, quality, and welcoming atmosphere.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🌮 Website Sections
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Home / Hero** – Introduction and store highlights
+- **Mexican Food** – Food gallery showcasing menu items
+- **Services** – Fuel, food, and convenience offerings
+- **Customer Reviews** – Real Google reviews from customers
+- **Location & Hours** – Address, map, and business hours
+- **Footer** – Quick links and contact details
+
+All navigation uses smooth scrolling within a single page.
+
+---
+
+## ✨ Features
+
+- Fully responsive design (mobile to desktop)
+- Smooth scrolling navigation
+- Modular, component-based structure
+- Data-driven food, services, and reviews sections
+- Embedded Google Map
+- Honest, community-focused messaging
+- Clean, modern UI styled with Tailwind CSS
+
+---
+
+## 🛠 Technology
+
+- React (Vite)
+- Tailwind CSS
+- React Icons
+- Google Maps Embed
+
+---
+
+## 📍 Location
+
+**Keith Bridge Food Mart (EXXON)**  
+3375 Keith Bridge Road  
+Cumming, GA 30041
+
+---
+
+## 📊 Store Highlights
+
+- **3+ Years Serving the Community**
+- **5000+ Customers Served**
+- **4.7★ Google Rating**
+
+---
+
+## 📸 Media & Content
+
+- Food images stored locally and displayed via reusable components
+- Food items sorted by price for clear presentation
+- Reviews based on real customer feedback
+
+---
+
+## 📄 License
+
+All content, branding, images, and copy are the property of **Keith Bridge Food Mart**.
+
+---
+
+## 🙌 Credits
+
+- Google Maps
+- Tailwind CSS
+- React Icons
+- Vite
