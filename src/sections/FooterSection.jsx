@@ -101,6 +101,7 @@ export default function FooterSection() {
                   href="https://maps.app.goo.gl/5B7Gm7UoH9zpX4uh8"
                   target="_blank"
                   rel="noreferrer"
+                  className="hover:text-white transition"
                 >
                   3375 Keith Bridge Road
                   <br />
@@ -109,12 +110,29 @@ export default function FooterSection() {
               </li>
               <li className="flex items-center">
                 <FaPhone className="mr-3 text-red-500" />
-                <a
-                  href="tel:+17705550123"
-                  className="hover:text-white transition"
-                >
-                  (770) 555-0123
-                </a>
+                <span>
+                  {" "}
+                  <span>Restaurant:</span>{" "}
+                  <a
+                    href="tel:+14705575448"
+                    className="hover:text-white transition"
+                  >
+                    (470) 557-5448
+                  </a>
+                </span>
+              </li>
+              <li className="flex items-center">
+                <FaPhone className="mr-3 text-red-500" />
+                <span>
+                  {" "}
+                  <span>Gas Station:</span>{" "}
+                  <a
+                    href="tel:+14702393499"
+                    className="hover:text-white transition"
+                  >
+                    (470) 239-3499
+                  </a>
+                </span>
               </li>
             </ul>
           </div>

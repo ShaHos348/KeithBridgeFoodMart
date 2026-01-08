@@ -41,7 +41,7 @@ export default function FoodGallerySection() {
             And much more! Visit us to see our full menu.
           </p>
           <a
-            href="tel:+1234567890"
+            href="tel:+4705575448"
             className="inline-flex items-center px-8 py-4 rounded-full text-white font-bold text-lg
                        bg-linear-to-r from-red-600 to-orange-500
                        hover:shadow-lg transition"

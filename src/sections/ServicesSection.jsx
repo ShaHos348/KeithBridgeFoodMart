@@ -38,10 +38,16 @@ export default function ServicesSection() {
             Fuel Up with Exxon Quality
           </h3>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-5 gap-10 max-w-4xl mx-auto">
             <GasCard label="Regular" value="87" />
             <GasCard label="Plus" value="89" highlight />
             <GasCard label="Premium" value="93" />
+            <GasCard label="NonEthanol" value="90" />
+            <div
+              className={`rounded-2xl p-6 text-center content-center bg-linear-to-br from-white to-gray-100 shadow border-2 border-red-500`}
+            >
+              <p className={`text-red-600 text-3xl font-medium`}>Diesel</p>
+            </div>
           </div>
 
           <p className="text-center text-gray-500 mt-4 text-sm flex items-center justify-center gap-1">

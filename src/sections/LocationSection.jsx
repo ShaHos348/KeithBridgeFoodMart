@@ -82,16 +82,19 @@ export default function LocationSection() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Hours</h3>
                 <div className="space-y-1">
                   <div className="flex justify-between text-gray-600">
-                    <span>Monday - Friday</span>
-                    <span className="font-semibold">5:00 AM - 10:00 PM</span>
+                    <span>
+                      {" "}
+                      <span className="font-bold">Restaurant:</span> Monday -
+                      Saturday
+                    </span>
+                    <span className="font-semibold">7:00 AM - 2:00 PM</span>
                   </div>
                   <div className="flex justify-between text-gray-600">
-                    <span>Saturday</span>
-                    <span className="font-semibold">6:00 AM - 10:00 PM</span>
-                  </div>
-                  <div className="flex justify-between text-gray-600">
-                    <span>Sunday</span>
-                    <span className="font-semibold">7:00 AM - 9:00 PM</span>
+                    <span>
+                      {" "}
+                      <span className="font-bold">Gas Station:</span> Everyday
+                    </span>
+                    <span className="font-semibold">7:00 AM - 10:00 PM</span>
                   </div>
                 </div>
               </div>
@@ -102,19 +105,30 @@ export default function LocationSection() {
               <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center shrink-0">
                 <FaPhone className="text-blue-600 text-2xl" />
               </div>
-              <div>
+              <div className="w-full">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   Contact
                 </h3>
-                <p className="text-gray-600">
-                  Give us a call to place an order!
-                </p>
-                <a
-                  href="tel:+1234567890"
-                  className="text-2xl font-bold text-red-600 hover:text-red-700"
-                >
-                  (770) 555-0123
-                </a>
+                <div className="space-y-1 font-bold">
+                  <div className="flex justify-between text-gray-600">
+                    <span>Restaurant:</span>
+                    <a
+                      href="tel:+14705575448"
+                      className=" text-red-600 hover:text-red-700 mr-0"
+                    >
+                      (470) 557-5448
+                    </a>
+                  </div>
+                  <div className="flex justify-between text-gray-600">
+                    <span>Gas Station:</span>
+                    <a
+                      href="tel:+14702393499"
+                      className=" text-red-600 hover:text-red-700 mr-0"
+                    >
+                      (470) 239-3499
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 
