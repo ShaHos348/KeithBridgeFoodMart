@@ -130,7 +130,9 @@ export default function HeroSection() {
                   </h3>
                   {FoodItems.filter((item) => item.type === "special").map(
                     (item) => (
-                      <p className="text-lg opacity-90 mb-4">{item.title} for ${item.price}</p>
+                      <p key={item.title.en} className="text-lg opacity-90 mb-4">
+                        {item.title.en} for ${item.price}
+                      </p>
                     )
                   )}
                   <div className="bg-white/20 rounded-xl p-4">
