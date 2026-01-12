@@ -30,7 +30,34 @@ export default function FoodGallerySection() {
 
         {/* Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {FoodItems.map((item) => (
+          {FoodItems.filter((item) => item.type === "regular").map((item) => (
+            <FoodCard key={item.title} {...item} />
+          ))}
+        </div>
+
+        <h3 className="text-center text-2xl font-semibold text-gray-900  m-4 underline">
+          Wednesday & Saturday Specials
+        </h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {FoodItems.filter((item) => item.type === "special").map((item) => (
+            <FoodCard key={item.title} {...item} />
+          ))}
+        </div>
+
+        <h3 className="text-center text-2xl font-semibold text-gray-900  m-4 underline">
+          Other
+        </h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {FoodItems.filter((item) => item.type === "other").map((item) => (
+            <FoodCard key={item.title} {...item} />
+          ))}
+        </div>
+
+        <h3 className="text-center text-2xl font-semibold text-gray-900  m-4 underline">
+          Appetizers/Desserts
+        </h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {FoodItems.filter((item) => item.type === "dessert").map((item) => (
             <FoodCard key={item.title} {...item} />
           ))}
         </div>
