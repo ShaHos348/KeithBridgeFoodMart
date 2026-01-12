@@ -1,6 +1,12 @@
 import { useMemo } from "react";
 
-export default function FoodCard({ title, description, price, image }) {
+export default function FoodCard({
+  title,
+  description,
+  price,
+  image,
+  lang = "en",
+}) {
   const gradients = [
     "from-red-400 to-orange-400",
     "from-yellow-400 to-red-500",
@@ -14,6 +20,9 @@ export default function FoodCard({ title, description, price, image }) {
   const gradient = useMemo(() => {
     return gradients[Math.floor(Math.random() * gradients.length)];
   }, []);
+
+  const displayTitle = title?.[lang] ?? "";
+  const displayDescription = description?.[lang] ?? "";
 
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
@@ -31,13 +40,15 @@ export default function FoodCard({ title, description, price, image }) {
 
       <div className="p-6">
         <div className="flex justify-between items-start mb-3">
-          <h3 className="text-xl font-bold text-gray-900">{title}</h3>
+          <h3 className="text-xl font-bold text-gray-900">{displayTitle}</h3>
         </div>
 
-        {description && (
+        {displayDescription && (
           <p className="text-gray-600 mb-4 whitespace-pre-line">
-            <span className="font-bold">Ingredients: </span>
-            {description}
+            <span className="font-bold">
+              {lang === "en" ? "Ingredients" : "Ingredientes"}:{" "}
+            </span>
+            {displayDescription}
           </p>
         )}
 
