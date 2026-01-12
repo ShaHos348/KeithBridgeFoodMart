@@ -112,7 +112,7 @@ export default function FooterSection() {
                 <FaPhone className="mr-3 text-red-500" />
                 <span>
                   {" "}
-                  <span>Restaurant:</span>{" "}
+                  <span>Deli:</span>{" "}
                   <a
                     href="tel:+14705575448"
                     className="hover:text-white transition"

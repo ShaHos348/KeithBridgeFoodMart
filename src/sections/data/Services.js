@@ -1,11 +1,11 @@
-import { FaGasPump, FaUtensils, FaStore, FaCoffee } from "react-icons/fa";
+import { FaGasPump, FaUtensils, FaStore, FaTicketAlt } from "react-icons/fa";
 
 const Services = [
   {
     icon: FaGasPump,
     title: "Premium Exxon Gas",
     description:
-      "Top-quality Exxon fuel for your vehicle. Regular, Plus, and Premium grades available 24/7.",
+      "Top-quality Exxon fuel for your vehicle. Regular, Plus, and Premium grades available.",
     cardGradient: "from-red-50 to-orange-50",
     iconGradient: "from-red-500 to-orange-500",
   },
@@ -26,10 +26,10 @@ const Services = [
     iconGradient: "from-blue-500 to-indigo-500",
   },
   {
-    icon: FaCoffee,
-    title: "Hot Beverages",
+    icon: FaTicketAlt,
+    title: "Lottery Tickets",
     description:
-      "Fresh coffee, hot chocolate, and specialty drinks to fuel your day.",
+      "Official state lottery tickets available daily, including scratch-offs and draw games.",
     cardGradient: "from-purple-50 to-pink-50",
     iconGradient: "from-purple-500 to-pink-500",
   },

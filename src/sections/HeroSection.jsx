@@ -4,6 +4,7 @@ import {
   FaPepperHot,
   FaChevronDown,
 } from "react-icons/fa";
+import FoodItems from "./data/FoodItems";
 
 function scrollToId(id) {
   const el = document.getElementById(id);
@@ -13,6 +14,28 @@ function scrollToId(id) {
   const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
   window.scrollTo({ top: y, behavior: "smooth" });
+}
+
+function checkTime(which) {
+  const now = new Date();
+
+  const estTime = new Date(
+    now.toLocaleString("en-US", { timeZone: "America/New_York" })
+  );
+
+  const hour = estTime.getHours(); // 0–23
+  const day = estTime.getDay(); // 0=Sun, 1=Mon, ..., 6=Sat
+
+  if (which === "hour") {
+    return hour >= 7 && hour < 14;
+  }
+
+  if (which === "special") {
+    // Wednesday (3) or Saturday (6)
+    return day === 3 || day === 6;
+  }
+
+  return false;
 }
 
 export default function HeroSection() {
@@ -31,12 +54,14 @@ export default function HeroSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left */}
           <div className="text-white">
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-              <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse" />
-              <span className="text-sm">
-                Open Now • Serving Fresh Food Daily
-              </span>
-            </div>
+            {checkTime("hour") && (
+              <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse" />
+                <span className="text-sm">
+                  Open Now • Serving Fresh Food Daily
+                </span>
+              </div>
+            )}
 
             <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
               <span className="text-red-500">Fuel Up</span> &<br />
@@ -95,15 +120,19 @@ export default function HeroSection() {
           </div>
 
           {/* Right */}
-          <div className="relative">
-            <div className="float-animation">
+          <div className="relative float-animation">
+            <div>
               <div className="relative bg-linear-to-br from-orange-400 to-red-600 rounded-3xl p-8 shadow-2xl">
                 <div className="text-center text-white">
                   <FaPepperHot className="text-6xl mb-4 mx-auto" />
-                  <h3 className="text-2xl font-bold mb-2">Today's Special</h3>
-                  <p className="text-lg opacity-90 mb-4">
-                    Authentic Tacos & Burritos
-                  </p>
+                  <h3 className="text-2xl font-bold mb-2">
+                    Wednesday & Saturday Specials
+                  </h3>
+                  {FoodItems.filter((item) => item.type === "special").map(
+                    (item) => (
+                      <p className="text-lg opacity-90 mb-4">{item.title} for ${item.price}</p>
+                    )
+                  )}
                   <div className="bg-white/20 rounded-xl p-4">
                     <p className="text-3xl font-extrabold">Fresh Daily!</p>
                     <p className="text-sm opacity-80">
@@ -115,12 +144,13 @@ export default function HeroSection() {
             </div>
 
             {/* Floating badge */}
-            <div className="absolute -top-4 -right-4 bg-yellow-400 text-gray-900 rounded-full w-20 h-20 flex items-center justify-center font-bold pulse-animation shadow-lg">
-              <div className="text-center">
-                <p className="text-xs">EXXON</p>
-                <p className="text-lg">⛽</p>
+            {checkTime("special") && (
+              <div className="absolute -top-4 -right-4 bg-yellow-400 text-blue-500 rounded-full w-20 h-20 flex items-center justify-center font-bold pulse-animation shadow-lg">
+                <div className="text-center">
+                  <p className="text-xs font">SERVING TODAY!!!</p>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>

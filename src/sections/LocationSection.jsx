@@ -84,7 +84,7 @@ export default function LocationSection() {
                   <div className="flex justify-between text-gray-600">
                     <span>
                       {" "}
-                      <span className="font-bold">Restaurant:</span> Monday -
+                      <span className="font-bold">Deli:</span> Monday -
                       Saturday
                     </span>
                     <span className="font-semibold">7:00 AM - 2:00 PM</span>
@@ -111,7 +111,7 @@ export default function LocationSection() {
                 </h3>
                 <div className="space-y-1 font-bold">
                   <div className="flex justify-between text-gray-600">
-                    <span>Restaurant:</span>
+                    <span>Deli:</span>
                     <a
                       href="tel:+14705575448"
                       className=" text-red-600 hover:text-red-700 mr-0"
@@ -142,7 +142,6 @@ export default function LocationSection() {
               <ul className="space-y-2 text-gray-700">
                 {[
                   "ATM Available",
-                  "Air Pump Available",
                   "Clean Restrooms",
                   "Lottery Tickets",
                 ].map((item) => (
