@@ -76,7 +76,7 @@ const FoodItems = [
       en: "Corn tortilla with meat, lettuce, tomatoes, onions, cilantro, and Mexican cheese.",
       es: "Tortilla de maíz con carne, lechuga, tomate, cebolla, cilantro y queso mexicano.",
     },
-    price: "15.00",
+    price: "5.50",
     type: "regular",
   },
   {
@@ -129,7 +129,7 @@ const FoodItems = [
       en: "Mexican-style steak made of beef strips simmered in a homemade red sauce, served with a side of rice, beans, and five tortillas.",
       es: "Bistek estilo mexicano que consiste en tiras de carne de res cocidas a fuego lento en una deliciosa salsa roja casera, acompañado de arroz, frijoles y cinco tortillas.",
     },
-    price: "12.50",
+    price: "13.00",
     type: "regular",
   },
   {
@@ -142,7 +142,7 @@ const FoodItems = [
       en: "Mexican-style pork ribs simmered in a delicious green tomatillo sauce, served with a side of rice, beans, and five tortillas.",
       es: "Costillas de cerdo al estilo mexicano cocidas a fuego lento en una deliciosa salsa verde de tomatillo, acompañadas de arroz, frijoles y cinco tortillas.",
     },
-    price: "12.50",
+    price: "13.00",
     type: "regular",
   },
   {
