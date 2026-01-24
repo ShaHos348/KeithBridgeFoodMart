@@ -65,7 +65,8 @@ export default function HeroSection() {
 
             <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
               <span className="text-red-500">Fuel Up</span> &<br />
-              <span className="text-orange-400">Eat Fresh</span>
+              <span className="text-orange-400">Eat Fresh</span><br />
+              <span className="text-yellow-400 text-3xl">(We do Home Deliveries)</span>
             </h1>
 
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">

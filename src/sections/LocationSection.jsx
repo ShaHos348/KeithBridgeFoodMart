@@ -6,6 +6,7 @@ import {
   FaInfoCircle,
   FaCheckCircle,
 } from "react-icons/fa";
+import contacts from "./data/Contacts";
 
 export default function LocationSection() {
   return (
@@ -81,21 +82,17 @@ export default function LocationSection() {
               <div className="w-full">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Hours</h3>
                 <div className="space-y-1">
-                  <div className="flex justify-between text-gray-600">
-                    <span>
-                      {" "}
-                      <span className="font-bold">Deli:</span> Monday -
-                      Saturday
-                    </span>
-                    <span className="font-semibold">7:00 AM - 2:00 PM</span>
-                  </div>
-                  <div className="flex justify-between text-gray-600">
-                    <span>
-                      {" "}
-                      <span className="font-bold">Gas Station:</span> Everyday
-                    </span>
-                    <span className="font-semibold">7:00 AM - 10:00 PM</span>
-                  </div>
+                  {contacts.map(({ title, days, hours }) => (
+                    <div
+                      key={title}
+                      className="flex justify-between text-gray-600"
+                    >
+                      <span>
+                        <span className="font-bold">{title}:</span> {days}
+                      </span>
+                      <span className="font-semibold">{hours}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -110,24 +107,21 @@ export default function LocationSection() {
                   Contact
                 </h3>
                 <div className="space-y-1 font-bold">
-                  <div className="flex justify-between text-gray-600">
-                    <span>Deli:</span>
-                    <a
-                      href="tel:+14705575448"
-                      className=" text-red-600 hover:text-red-700 mr-0"
+                  {contacts.map(({ title, number }) => (
+                    <div
+                      key={title}
+                      className="flex justify-between text-gray-600"
                     >
-                      (470) 557-5448
-                    </a>
-                  </div>
-                  <div className="flex justify-between text-gray-600">
-                    <span>Gas Station:</span>
-                    <a
-                      href="tel:+14702393499"
-                      className=" text-red-600 hover:text-red-700 mr-0"
-                    >
-                      (470) 239-3499
-                    </a>
-                  </div>
+                      <span>{title}:</span>
+                      <a
+                        href={`tel:+1${number}`}
+                        className="text-red-600 hover:text-red-700"
+                      >
+                        ({number.slice(0, 3)}) {number.slice(3, 6)}-
+                        {number.slice(6)}
+                      </a>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -140,16 +134,14 @@ export default function LocationSection() {
               </div>
 
               <ul className="space-y-2 text-gray-700">
-                {[
-                  "ATM Available",
-                  "Clean Restrooms",
-                  "Lottery Tickets",
-                ].map((item) => (
-                  <li key={item} className="flex items-center">
-                    <FaCheckCircle className="text-green-500 mr-2" />
-                    {item}
-                  </li>
-                ))}
+                {["ATM Available", "Clean Restrooms", "Lottery Tickets"].map(
+                  (item) => (
+                    <li key={item} className="flex items-center">
+                      <FaCheckCircle className="text-green-500 mr-2" />
+                      {item}
+                    </li>
+                  ),
+                )}
               </ul>
             </div>
           </div>

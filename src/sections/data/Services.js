@@ -1,4 +1,10 @@
-import { FaGasPump, FaUtensils, FaStore, FaTicketAlt } from "react-icons/fa";
+import {
+  FaGasPump,
+  FaUtensils,
+  FaStore,
+  FaTicketAlt,
+  FaTruck,
+} from "react-icons/fa";
 
 const Services = [
   {
@@ -32,6 +38,14 @@ const Services = [
       "Official state lottery tickets available daily, including scratch-offs and draw games.",
     cardGradient: "from-purple-50 to-pink-50",
     iconGradient: "from-purple-500 to-pink-500",
+  },
+  {
+    icon: FaTruck,
+    title: "Home Delivery",
+    description:
+      "Enjoy products delivered straight to your door. Fast, convenient home delivery available daily.",
+    cardGradient: "from-yellow-50 to-green-50",
+    iconGradient: "from-yellow-500 to-green-500",
   },
 ];
 
