@@ -72,7 +72,7 @@ export default function FooterSection() {
               {[
                 ["Home", "home"],
                 ["Mexican Food", "food"],
-                ["Services", "services"],
+                ["Services", "gas"],
                 ["Location", "location"],
               ].map(([label, id]) => (
                 <li key={id}>
