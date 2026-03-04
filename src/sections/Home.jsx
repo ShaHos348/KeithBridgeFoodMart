@@ -1,6 +1,7 @@
 import NavbarSection from "./NavbarSection";
 import HeroSection from "./HeroSection";
-import ServicesSection from "./ServicesSection";
+// import ServicesSection from "./ServicesSection";
+import GasSection from "./GasSection";
 import GrocerySection from "./GrocerySection";
 import LottoSection from "./LottoSection";
 import FoodGallerySection from "./FoodGallerySection";
@@ -13,7 +14,7 @@ function Home() {
     <div>
       <NavbarSection />
       <HeroSection />
-      <ServicesSection />
+      <GasSection />
       <GrocerySection />
       <LottoSection />
       <FoodGallerySection />

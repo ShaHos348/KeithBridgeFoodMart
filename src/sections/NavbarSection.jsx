@@ -16,7 +16,7 @@ export default function NavbarSection() {
 
   const links = [
     { label: "Home", id: "home" },
-    { label: "Services", id: "services" },
+    //{ label: "Services", id: "services" },
     { label: "Gas", id: "gas" },
     { label: "Grocery", id: "grocery" },
     { label: "Lotto", id: "lotto" },
