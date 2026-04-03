@@ -16,15 +16,15 @@ export default function GasSection() {
           </h2>
 
           <div className="grid md:grid-cols-5 gap-10 max-w-4xl mx-auto">
-            <GasCard label="Regular" value="87" price="0.00" />
-            <GasCard label="Plus" value="89" price="0.00" />
-            <GasCard label="Premium" value="93" price="0.00" />
-            <GasCard label="NonEthanol" value="90" price="0.00" />
+            <GasCard label="Regular" value="87" price="3.75" />
+            <GasCard label="Plus" value="89" price="4.29" />
+            <GasCard label="Premium" value="93" price="4.79" />
+            <GasCard label="NonEthanol" value="90" price="5.29" />
             <div
               className={`rounded-2xl p-6 text-center content-end bg-linear-to-br from-white to-gray-100 shadow border-2 border-red-500`}
             >
               <p className={`text-red-600 text-3xl font-medium`}>Diesel</p>
-              {/*<p className="font-semibold text-xl text-gray-900 mt-10">$0.00</p>*/}
+              <p className="font-semibold text-xl text-gray-900 mt-10">$5.09</p>
             </div>
           </div>
 
