@@ -14,7 +14,7 @@ export default function LottoSection() {
         </div>
 
         {/* Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center">
+        <div className="m md:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center">
           {LottoItems.map((item) => (
             <ImageCard key={item.title} {...item} />
           ))}
